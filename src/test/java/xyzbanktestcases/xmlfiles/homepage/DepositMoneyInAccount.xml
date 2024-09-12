@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="/Users/ahmedel-zeiny/Documents/selenium-4-java-fundamentals/01/demos/PracticeSelenium/src/test/java/xyzbanktestcases/homepage/HomePageTest.java">
+        <classes>
+            <class name="xyzbanktestcases.homepage.DepositMoneyAccount">
+                <methods>
+                    <include name="depositMoney"/>
+                </methods>
+                <parameter name="customerName" value="Albus Dumbledore"/>
+                <parameter name="amount" value="800 "/>
+            </class>
+        </classes>
+
+    </test>
+
+
+</suite>
