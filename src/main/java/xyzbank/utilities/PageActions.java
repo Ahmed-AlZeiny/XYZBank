@@ -11,6 +11,7 @@ public class PageActions {
     WebDriver browser = BrowserFactory.getBrowser();
     WebDriverWait wait = BrowserFactory.getWait();
     Select selectList;
+    String textValue;
 
     public void waitForElement(By locator) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -30,14 +31,19 @@ public class PageActions {
         return this;
     }
 
-    public String getTextValue(By element) {
+    public PageActions setText(By element) {
         waitForElement(element);
-        return browser.findElement(element).getText();
+        textValue = browser.findElement(element).getText();
+        return this;
     }
 
     public PageActions insertValueInField(By locator, String value) {
         waitForElement(locator);
         browser.findElement(locator).sendKeys(value);
         return this;
+    }
+
+    public String getTextValue() {
+        return textValue;
     }
 }

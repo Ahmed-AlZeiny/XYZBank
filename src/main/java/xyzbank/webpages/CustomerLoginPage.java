@@ -22,7 +22,7 @@ public class CustomerLoginPage {
     }
 
     public String getCustomerName(){
-       return pageActionsObj.getTextValue(customerName);
+       return pageActionsObj.setText(customerName).getTextValue();
     }
 
 
