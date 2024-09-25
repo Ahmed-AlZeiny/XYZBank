@@ -24,8 +24,8 @@ public class CustomerAccountActions {
 
     public CustomerAccountActions withdrawMoney(String amount) {
         pageActionsObj.clickOnElement(showWithdrawField).
-                insertValueInField(withdrawField , amount).
-                clickOnElement(confirmWithDrawBtn);
+                        insertValueInField(withdrawField , amount).
+                        clickOnElement(confirmWithDrawBtn);
         return this;
     }
 
